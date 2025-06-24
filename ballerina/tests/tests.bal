@@ -16,17 +16,17 @@
 
 import ballerina/test;
 
-configurable boolean IS_LIVE_SERVER = ?;
-configurable string MAILCHIMP_USERNAME = ?;
-configurable string MAILCHIMP_API_KEY = ?;
-configurable string MAILCHIMP_BASE_URL = ?;
+configurable boolean isLiveServer = ?;
+configurable string username = ?;
+configurable string mailchimpApiKey = ?;
+configurable string baseUrl = ?;
 
 Client mailchimp = check new ({
     auth: {
-        username: MAILCHIMP_USERNAME,
-        password: MAILCHIMP_API_KEY
+        username: username,
+        password: mailchimpApiKey
     }
-}, IS_LIVE_SERVER ? MAILCHIMP_BASE_URL : "http://localhost:9090");
+}, isLiveServer ? baseUrl : "http://localhost:9090");
 
 @test:Config
 function listAutomations() returns error? {
