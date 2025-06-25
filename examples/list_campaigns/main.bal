@@ -19,7 +19,6 @@ import ballerinax/mailchimp.marketing as mailchimp;
 
 configurable string username = ?;
 configurable string mailchimpApiKey = ?;
-const string baseUrl = "https://us9.api.mailchimp.com/3.0";
 
 public function main() returns error? {
     mailchimp:Client mailchimpClient = check new ({
@@ -27,7 +26,7 @@ public function main() returns error? {
             username,
             password: mailchimpApiKey
         }
-    }, baseUrl);
+    });
 
     mailchimp:InlineResponse2007|error campaignsResult = mailchimpClient->/campaigns.get();
 
