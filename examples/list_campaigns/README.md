@@ -22,7 +22,7 @@ Create a `Config.toml` file in the `examples/list_campaings` directory:
 
 ```toml
 username = "<your-mailchimp-marketing-username>"
- mailchimpApiKey = "<your-mailchimp-marketing-access-token>"
+mailchimpApiKey = "<your-mailchimp-marketing-access-token>"
 ```
 
 ## How to Run
@@ -34,8 +34,13 @@ username = "<your-mailchimp-marketing-username>"
    cd module-ballerinax-mailchimp.marketing/examples/list_campaigns
    ```
 
-2. Set up `Config.toml`:
-   Place the `Config.toml` file with your Mailchimp credentials in the root of your Ballerina project (or use environment variables).
+2. Set up your credentials:
+   Create a `Config.toml` file in the `examples/list_campaigns` directory with the following content:
+
+   ```toml
+   username = "<your-mailchimp-marketing-username>"
+   mailchimpApiKey = "<your-mailchimp-marketing-access-token>"
+   ```
 
 3. Run the Ballerina program:
 
