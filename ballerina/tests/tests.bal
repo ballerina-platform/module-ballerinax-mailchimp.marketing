@@ -23,7 +23,7 @@ configurable string baseUrl = ?;
 
 Client mailchimp = check new ({
     auth: {
-        username: username,
+        username,
         password: mailchimpApiKey
     }
 }, isLiveServer ? baseUrl : "http://localhost:9090");

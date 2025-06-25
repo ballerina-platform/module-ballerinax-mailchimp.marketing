@@ -24,7 +24,7 @@ const string baseUrl = "https://us9.api.mailchimp.com/3.0";
 public function main() returns error? {
     mailchimp:Client mailchimpClient = check new ({
         auth: {
-            username: username,
+            username,
             password: mailchimpApiKey
         }
     }, baseUrl);

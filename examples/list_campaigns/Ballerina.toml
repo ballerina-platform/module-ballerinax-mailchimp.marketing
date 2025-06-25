@@ -6,9 +6,3 @@ distribution = "2201.8.4"
 
 [build-options]
 observabilityIncluded = true
-
-[[dependency]]
-name="mailchimp.marketing"
-org="ballerinax"
-version="1.0.0"
-repository="local"

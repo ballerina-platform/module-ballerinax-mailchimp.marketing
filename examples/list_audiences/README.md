@@ -12,7 +12,7 @@ Listing audience lists is often the first step in any Mailchimp integration, as 
 
 ## Prerequisites
 
-- Ballerina Swan Lake Update 8 (or later)
+- Ballerina Swan Lake Update 12 (or later)
 - A Mailchimp account
 - A Mailchimp API Key. You can generate an API key from your Mailchimp account settings: `Profile > Extras > API Keys`.
 
