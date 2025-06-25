@@ -23,7 +23,7 @@ Create a `Config.toml` file in the `examples/list_campaings` directory:
 ```toml
 username = "<your-mailchimp-marketing-username>"
  mailchimpApiKey = "<your-mailchimp-marketing-access-token>"
-````
+```
 
 ## How to Run
 

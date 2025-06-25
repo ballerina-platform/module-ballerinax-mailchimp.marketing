@@ -38,11 +38,8 @@ public function main() returns error? {
             foreach mailchimp:SubscriberList3 list in listsResult.lists {
                 io:println("List ID: ", list["id"]);
                 io:println("Name: ", list["name"]);
-                anydata statsField = list["stats"];
-                int memberCount = 0;
-                if (statsField is map<anydata>) {
-                    memberCount = <int>(statsField["member_count"] ?: 0);
-                }
+                mailchimp:Statistics? statsField = list.stats;
+                int memberCount = statsField?.memberCount ?: 0;
                 io:println("Members: ", memberCount);
                 io:println("Created: ", list["date_created"] ?: "N/A");
             }
