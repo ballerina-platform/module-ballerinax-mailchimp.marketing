@@ -31,25 +31,25 @@ Client mailchimp = check new ({
 @test:Config
 function listAutomations() returns error? {
     InlineResponse2005 response = check mailchimp->/automations();
-    test:assertNotEquals(response, ());
+    test:assertNotEquals(response.totalItems, ());
 }
 
 @test:Config
 function listAccountExports() returns error? {
     InlineResponse2001 response = check mailchimp->/account\-exports();
-    test:assertNotEquals(response, ());
+    test:assertNotEquals(response.totalItems, ());
 }
 
 @test:Config
 function getLatestChimpChatter() returns error? {
     InlineResponse200 response = check mailchimp->/activity\-feed/chimp\-chatter();
-    test:assertNotEquals(response, ());
+    test:assertNotEquals(response.totalItems, ());
 }
 
 @test:Config
 function listAuthorizedApps() returns error? {
     InlineResponse2003 response = check mailchimp->/authorized\-apps();
-    test:assertNotEquals(response, ());
+    test:assertNotEquals(response.totalItems, ());
 }
 
 @test:Config
