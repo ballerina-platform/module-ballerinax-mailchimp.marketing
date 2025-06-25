@@ -31,8 +31,8 @@ public function main() returns error? {
 
     mailchimp:SubscriberLists|error listsResult = mailchimpClient->/lists.get();
 
-    if (listsResult is mailchimp:SubscriberLists) {
-        if (listsResult.lists is mailchimp:SubscriberList3[] && listsResult.lists.length() > 0) {
+    if listsResult is mailchimp:SubscriberLists {
+        if listsResult.lists is mailchimp:SubscriberList3[] && listsResult.lists.length() > 0 {
             io:println("Successfully fetched audience lists. Total lists: ", listsResult.totalItems);
 
             foreach mailchimp:SubscriberList3 list in listsResult.lists {

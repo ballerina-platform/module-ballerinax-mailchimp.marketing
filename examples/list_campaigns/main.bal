@@ -31,7 +31,7 @@ public function main() returns error? {
 
     mailchimp:InlineResponse2007|error campaignsResult = mailchimpClient->/campaigns.get();
 
-    if (campaignsResult is mailchimp:InlineResponse2007) {
+    if campaignsResult is mailchimp:InlineResponse2007 {
         mailchimp:Campaign4[]? campaignsOpt = campaignsResult.campaigns;
         if campaignsOpt is mailchimp:Campaign4[] && campaignsOpt.length() > 0 {
             io:println("Successfully fetched campaigns. Total campaigns: ", campaignsResult.totalItems);
