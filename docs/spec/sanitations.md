@@ -5,9 +5,9 @@ _Edition_: Swan Lake
 
 # Sanitation for OpenAPI specification
 
-This document records the sanitation done on top of the official OpenAPI specification from MailChimp Marketing Emails. 
+This document outlines the manual sanitation done on top of the official OpenAPI specification from MailChimp Marketing Emails. 
 The OpenAPI specification is obtained from [Mailchimp official Github](https://github.com/mailchimp/mailchimp-client-lib-codegen/blob/30f5482a24861d1f23ba06d94898d42bebf1f331/spec/marketing.json). 
-These changes improve usability and work around known compatibility issues with Ballerina.
+After being flattened and aligned by the Ballerina OpenAPI tool, these manual modifications are implemented to improve the developer experience and to circumvent certain language and tool limitations.
 
 ---
 
@@ -81,7 +81,7 @@ Works around GitHub issue [#38535](https://github.com/ballerina-platform/balleri
 
 ## OpenAPI CLI command
 
-Use the following command to generate the Ballerina client after applying these sanitizations:
+The following command was used to generate the Ballerina client from the OpenAPI specification. The command should be executed from the repository root directory.
 
 ```bash
 bal openapi -i docs/spec/openapi.json --mode client --license docs/license.txt -o ballerina
