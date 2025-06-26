@@ -84,5 +84,5 @@ Works around GitHub issue [#38535](https://github.com/ballerina-platform/balleri
 Use the following command to generate the Ballerina client after applying these sanitizations:
 
 ```bash
-bal openapi -i docs/spec/openapi.json --mode client -o ballerina
+bal openapi -i docs/spec/openapi.json --mode client --license docs/license.txt -o ballerina
 ```
