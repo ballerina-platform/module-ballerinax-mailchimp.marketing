@@ -1,5 +1,5 @@
 [package]
-org = "ballerinax"
+org = "wso2"
 name = "list_account_exports"
 version = "0.1.0"
 distribution = "2201.8.4"
