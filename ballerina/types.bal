@@ -273,7 +273,7 @@ public type InlineResponse20013InlineResponse20013InlineResponse20013AllOf123 re
     InlineResponse20013AudienceActivity audienceActivity?;
     InlineResponse20011Budget budget?;
     @jsondata:Name {value: "report_summary"}
-    InlineResponse20013ReportSummary inlineReportSummary?;
+    InlineResponse20013ReportSummary reportSummary?;
 };
 
 # Represents the Queries record for the operation: getAllFacebookAds
@@ -3192,6 +3192,9 @@ public type InlineResponse20012FacebookAds record {
     *FacebookAdsFacebookAdsAllOf112;
     *FacebookAdsFacebookAdsFacebookAdsAllOf1123;
     *FacebookAdsFacebookAdsFacebookAdsFacebookAdsAllOf11234;
+    @jsondata:Name {value: "report_summary"}
+    record {*InlineResponse20013ReportSummary; *ReportSummary; int reach?; @jsondata:Name {value: "click_rate"}
+        decimal clickRate?; decimal impressions?; ReportSummaryEcommerce ecommerce?; int clicks?;} reportSummary?;
 };
 
 # A specific feedback message from a specific campaign
@@ -4612,7 +4615,7 @@ public type InlineResponse20013ReportSummary record {
     InlineResponse20013ReportSummaryExtendedAt extendedAt?;
     @jsondata:Name {value: "return_on_investment"}
     decimal returnOnInvestment?;
-    int impressions?;
+    decimal impressions?;
     @jsondata:Name {value: "total_orders"}
     int totalOrders?;
     @jsondata:Name {value: "first_time_buyers"}
@@ -10580,7 +10583,7 @@ public type FacebookAdsFacebookAdsFacebookAdsAllOf1123 record {
     InlineResponse20013AudienceActivity audienceActivity?;
     InlineResponse20011Budget budget?;
     @jsondata:Name {value: "report_summary"}
-    InlineResponse20013ReportSummary inlineReportSummary?;
+    InlineResponse20013ReportSummary reportSummary?;
 };
 
 # A summary of an individual landing page's settings and content
@@ -11876,6 +11879,9 @@ public type InlineResponse20013 record {
     *InlineResponse20013InlineResponse20013AllOf12;
     *InlineResponse20013InlineResponse20013InlineResponse20013AllOf123;
     *InlineResponse20013InlineResponse20013InlineResponse20013InlineResponse20013AllOf1234;
+    @jsondata:Name {value: "report_summary"}
+    record {*InlineResponse20013ReportSummary; *ReportSummary; int reach?; @jsondata:Name {value: "click_rate"}
+        decimal clickRate?; decimal impressions?; ReportSummaryEcommerce ecommerce?; int clicks?;} reportSummary?;
 };
 
 public type InlineResponse20016 record {
