@@ -63,5 +63,6 @@ bal run
 
 The `MailChimp Marketing Emails` connector provides practical examples illustrating usage in various scenarios. Explore these [examples](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples), covering the following use cases:
 
-1. [List Mailchimp Audiences](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples/list_audiences) – Fetch and display a list of all your Mailchimp audience lists.
-2. [List Mailchimp Campaigns](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples/list_campaigns) – Fetch and display a list of all campaigns from your Mailchimp account.
+
+1. [Add Mailchimp Subscriber](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples/add_subscriber) – Add a new subscriber to a specific Mailchimp audience list.
+2. [List Mailchimp Audiences](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples/list_audiences) – Fetch and display a list of all your Mailchimp audience lists.

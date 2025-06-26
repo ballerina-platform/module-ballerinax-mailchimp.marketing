@@ -1,6 +1,6 @@
 [package]
 org = "wso2"
-name = "list_account_exports"
+name = "add_subscriber"
 version = "0.1.0"
 distribution = "2201.12.0"
 

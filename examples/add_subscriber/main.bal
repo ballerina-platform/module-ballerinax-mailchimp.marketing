@@ -15,10 +15,12 @@
 // under the License.
 
 import ballerina/io;
+import ballerina/uuid;
 import ballerinax/mailchimp.marketing as mailchimp;
 
 configurable string username = ?;
 configurable string mailchimpApiKey = ?;
+configurable string mailchimpListId = ?;
 
 mailchimp:Client mailchimpClient = check new ({
     auth: {
@@ -28,24 +30,24 @@ mailchimp:Client mailchimpClient = check new ({
 });
 
 public function main() returns error? {
-    mailchimp:InlineResponse2007|error campaignsResult = mailchimpClient->/campaigns.get();
+    string newSubscriberEmail = "short.example." + uuid:createType4AsString().substring(0, 8) + "@example.com";
 
-    if campaignsResult is mailchimp:InlineResponse2007 {
-        mailchimp:Campaign4[]? campaignsOpt = campaignsResult.campaigns;
-        if campaignsOpt is mailchimp:Campaign4[] && campaignsOpt.length() > 0 {
-            io:println("Successfully fetched campaigns. Total campaigns: ", campaignsResult.totalItems);
+    mailchimp:AddListMembers1 newMemberPayload = {
+        emailAddress: newSubscriberEmail,
+        status: "subscribed"
+    };
 
-            foreach mailchimp:Campaign4 campaign in campaignsOpt {
-                io:println("Campaign ID: ", campaign.id);
-                io:println("Title: ", campaign.settings?.title ?: "N/A");
-                io:println("Type: ", campaign["type"]);
-                io:println("Status: ", campaign.status);
-                io:println("Create Time: ", campaign.createTime ?: "N/A");
-            }
-        } else {
-            io:println("No campaigns found.");
-        }
+    mailchimp:ListMembers2|error addMemberResult = 
+        mailchimpClient->/lists/[mailchimpListId]/members.post(newMemberPayload);
+
+    if addMemberResult is mailchimp:ListMembers2 {
+        io:println("Successfully added subscriber:");
+        io:println("Email: ", addMemberResult.emailAddress);
+        io:println("ID: ", addMemberResult.id);
+        io:println("Status: ", addMemberResult.status);
     } else {
-        io:println("Error fetching campaigns: ", campaignsResult.message());
+        io:println("Error adding subscriber: ", addMemberResult.message());
+        return addMemberResult;
     }
+    io:println("Short Mailchimp example finished.");
 }
