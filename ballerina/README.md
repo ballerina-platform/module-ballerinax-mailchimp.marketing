@@ -1,6 +1,6 @@
 ## Overview
 
-[Mailchimp Marketing Email](https://mailchimp.com/developer/marketing/) is a powerful and user-friendly platform provided by Intuit Mailchimp, designed for creating, managing, and optimizing targeted email campaigns. It enables businesses to engage customers with personalized marketing emails, automated workflows, and insightful analytics to drive growth and build lasting relationships.
+[Mailchimp Marketing Email](https://mailchimp.com) is a powerful and user-friendly platform provided by Intuit Mailchimp, designed for creating, managing, and optimizing targeted email campaigns. It enables businesses to engage customers with personalized marketing emails, automated workflows, and insightful analytics to drive growth and build lasting relationships.
 
 The `ballerinax/mailchimp.marketing` package provides APIs to connect and interact with the [Mailchimp Marketing API](https://mailchimp.com/developer/marketing/api/), enabling seamless integration with applications to manage marketing email sending, templates, messages, and more.
 
@@ -14,22 +14,22 @@ To use the Mailchimp Marketing Email connector, you need to have a Mailchimp acc
 
 2. Once signed in, click on your profile icon in the bottom-left corner to access the account menu.
 
-    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_dashboard.png" alt="Mailchimp Dashboard" style="width: 70%;"/>
-    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_menu.png" alt="Mail chimp Profile Menu" style="width:20%">
+    ![Mailchimp dashboard](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_dashboard.png)
+    ![Mailchimp Profile Menu](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_menu.png)
 
 ### Step 2: Generate a API Key
 
 1. In the menu, go to **Extras** section and click on **API keys**.
 
-    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_menu_extra.png" alt="Mailchimp extra section" style="width:70%">
+    ![Mailchimp Extra Section](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_menu_extra.png)
 
 2. Choose **Create A Key** (not the Mandril API key). You will be redirected to the API Key Generate Dashboard.
 
-    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/api_key.png" alt="Mailchimp API selection" style="width: 70%;"/>
+    ![Mailchimp API Selection](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/api_key.png)
 
 3. In the API Key dashboard, add a API key name and click **Generate  Key** to generate your key.
 
-    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/api_key_dashboard.png" alt="API key Generate" style="width:70%">
+    ![Mailchimp API Key Generat](https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/api_key_dashboard.png)
 
 4. Copy the generated API key. You will need this to authenticate your connector.
    
