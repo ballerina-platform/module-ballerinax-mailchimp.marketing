@@ -14,22 +14,22 @@ To use the Mailchimp Marketing Email connector, you need to have a Mailchimp acc
 
 2. Once signed in, click on your profile icon in the bottom-left corner to access the account menu.
 
-    <img src="../docs/setup/resources/mailchimp_dashboard.png" alt="Mailchimp Dashboard" style="width: 70%;"/>
-    <img src="../docs/setup/resources/mailchimp_menu.png" alt="Mail chimp Profile Menu" style="width:20%">
+    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_dashboard.png" alt="Mailchimp Dashboard" style="width: 70%;"/>
+    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_menu.png" alt="Mail chimp Profile Menu" style="width:20%">
 
 ### Step 2: Generate a API Key
 
 1. In the menu, go to **Extras** section and click on **API keys**.
 
-    <img src="../docs/setup/resources/mailchimp_menu_extra.png" alt="Mailchimp extra section" style="width:70%">
+    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/mailchimp_menu_extra.png" alt="Mailchimp extra section" style="width:70%">
 
 2. Choose **Create A Key** (not the Mandril API key). You will be redirected to the API Key Generate Dashboard.
 
-    <img src="../docs/setup/resources/api_key.png" alt="Mailchimp API selection" style="width: 70%;"/>
+    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/api_key.png" alt="Mailchimp API selection" style="width: 70%;"/>
 
 3. In the API Key dashboard, add a API key name and click **Generate  Key** to generate your key.
 
-    <img src="../docs/setup/resources/api_key_dashboard.png" alt="API key Generate" style="width:70%">
+    <img src="https://raw.githubusercontent.com/ballerina-platform/module-ballerinax-mailchimp.marketing/refs/heads/main/docs/setup/resources/api_key_dashboard.png" alt="API key Generate" style="width:70%">
 
 4. Copy the generated API key. You will need this to authenticate your connector.
    
