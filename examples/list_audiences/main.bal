@@ -20,14 +20,14 @@ import ballerinax/mailchimp.marketing as mailchimp;
 configurable string username = ?;
 configurable string mailchimpApiKey = ?;
 
-public function main() returns error? {
-    mailchimp:Client mailchimpClient = check new({
-        auth: {
-            username,
-            password: mailchimpApiKey
-        }
-    });
+mailchimp:Client mailchimpClient = check new({
+    auth: {
+        username,
+        password: mailchimpApiKey
+    }
+});
 
+public function main() returns error? {
     mailchimp:SubscriberLists|error listsResult = mailchimpClient->/lists.get();
 
     if listsResult is mailchimp:SubscriberLists {
