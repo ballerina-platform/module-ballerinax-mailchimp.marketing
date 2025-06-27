@@ -2,13 +2,14 @@
 
 The `ballerinax/mailchimp.marketing` connector provides practical examples illustrating usage in various scenarios.
 
-[//]: # (TODO: Add examples)
-1. 
-2. 
+1. [List Mailchimp Audiences](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples/list_audiences) – Fetch and display a list of all your Mailchimp audience lists.
+2. [List Mailchimp Campaigns](https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing/tree/main/examples/list_campaigns) – Fetch and display a list of all campaigns from your Mailchimp account.
 
 ## Prerequisites
 
-[//]: # (TODO: Add prerequisites)
+- Ballerina Swan Lake Update 12 (or later)
+- A Mailchimp account
+- A Mailchimp API Key. You can generate an API key from your Mailchimp account settings: `Profile > Extras > API Keys`.
 
 ## Running an example
 
