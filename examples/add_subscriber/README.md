@@ -59,8 +59,28 @@ In case of an error, it will print the error message.
 **Example output:**
 
 ```
-Successfully added subscriber:
-Email: short.example.abcdefgh@example.com
+Added subscriber:
+Email: test.subscriber.abcd1234@example.com
 ID: 1234567890abcdef1234567890abcdef
 Status: subscribed
+
+Retrieved member info:
+Email: test.subscriber.abcd1234@example.com
+Status: subscribed
+Merge Fields: {}
+
+Tag 'BallerinaTestTag' added to member.
+
+Deleted member with ID: 1234567890abcdef1234567890abcdef
+
+Ping successful. Health Status: Good
+
+Retrieved 2 lists:
+  - List Name: 'Newsletter Audience', ID: 'a1b2c3d4e5'
+  - List Name: 'Product Updates', ID: 'f6g7h8i9j0'
+
+List activity (3 items):
+  - Activity: 'subscribe' on '2024-06-25T14:32:12+00:00' for email 'user1@example.com'
+  - Activity: 'unsubscribe' on '2024-06-24T11:18:49+00:00' for email 'user2@example.com'
+  - Activity: 'cleaned' on '2024-06-23T10:05:33+00:00' for email 'user3@example.com'
 ```

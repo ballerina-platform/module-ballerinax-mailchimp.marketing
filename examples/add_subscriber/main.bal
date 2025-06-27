@@ -30,17 +30,52 @@ mailchimp:Client mailchimpClient = check new ({
 });
 
 public function main() returns error? {
-    string newSubscriberEmail = "short.example." + uuid:createType4AsString().substring(0, 8) + "@example.com";
-
+    string newSubscriberEmail = "test.subscriber." + uuid:createType4AsString().substring(0, 8) + "@example.com";
     mailchimp:AddListMembers1 newMemberPayload = {
         emailAddress: newSubscriberEmail,
         status: "subscribed"
     };
 
-    mailchimp:ListMembers2 addMemberResult =
-    mailchimpClient->/lists/[mailchimpListId]/members.post(newMemberPayload);
-    io:println("Successfully added subscriber:");
+    mailchimp:ListMembers2 addMemberResult = check mailchimpClient->/lists/[mailchimpListId]/members.post(newMemberPayload);
+    if addMemberResult.id is () {
+        return error("Member ID not found after addition.");
+    }
+    string memberId = <string>addMemberResult.id;
+
+    io:println("Added subscriber:");
     io:println("Email: ", addMemberResult.emailAddress);
-    io:println("ID: ", addMemberResult.id);
+    io:println("ID: ", memberId);
     io:println("Status: ", addMemberResult.status);
+
+    mailchimp:ListMembers2 getMemberResult = check mailchimpClient->/lists/[mailchimpListId]/members/[memberId].get();
+    io:println("\nRetrieved member info:");
+    io:println("Email: ", getMemberResult.emailAddress);
+    io:println("Status: ", getMemberResult.status);
+    io:println("Merge Fields: ", getMemberResult.mergeFields.toJsonString());
+
+    mailchimp:MemberTags addTagPayload = {
+        tags: [{ name: "BallerinaTestTag", status: "active" }]
+    };
+    check mailchimpClient->/lists/[mailchimpListId]/members/[memberId]/tags.post(addTagPayload);
+    io:println("\nTag 'BallerinaTestTag' added to member.");
+
+    check mailchimpClient->/lists/[mailchimpListId]/members/[memberId].delete();
+    io:println("\nDeleted member with ID: ", memberId);
+
+    mailchimp:APIHealthStatus pingResult = check mailchimpClient->/ping.get();
+    io:println("\nPing successful. Health Status: ", pingResult.healthStatus);
+
+    mailchimp:SubscriberLists listsResult = check mailchimpClient->/lists.get();
+    io:println("\nRetrieved ", listsResult.totalItems, " lists:");
+    foreach var list in listsResult.lists {
+        io:println("  - List Name: '", list.name, "', ID: '", list.id, "'");
+    }
+
+    mailchimp:ListActivity listActivityResult = check mailchimpClient->/lists/[mailchimpListId]/activity.get();
+    io:println("\nList activity (", listActivityResult.totalItems, " items):");
+    foreach var activity in listActivityResult.activity ?: [] {
+        io:println("  - Activity: '", activity["activityType"], "' on '", activity["timestamp"], "' for email '", activity["emailAddress"], "'");
+    }
+
+    return;
 }
