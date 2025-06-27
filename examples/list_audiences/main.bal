@@ -28,24 +28,20 @@ mailchimp:Client mailchimpClient = check new({
 });
 
 public function main() returns error? {
-    mailchimp:SubscriberLists|error listsResult = mailchimpClient->/lists.get();
+    mailchimp:SubscriberLists listsResult = check mailchimpClient->/lists.get();
 
-    if listsResult is mailchimp:SubscriberLists {
-        if listsResult.lists is mailchimp:SubscriberList3[] && listsResult.lists.length() > 0 {
-            io:println("Successfully fetched audience lists. Total lists: ", listsResult.totalItems);
+    if listsResult.lists is mailchimp:SubscriberList3[] && listsResult.lists.length() > 0 {
+        io:println("Successfully fetched audience lists. Total lists: ", listsResult.totalItems);
 
-            foreach mailchimp:SubscriberList3 list in listsResult.lists {
-                io:println("List ID: ", list["id"]);
-                io:println("Name: ", list["name"]);
-                mailchimp:Statistics? statsField = list.stats;
-                int memberCount = statsField?.memberCount ?: 0;
-                io:println("Members: ", memberCount);
-                io:println("Created: ", list["date_created"] ?: "N/A");
-            }
-        } else {
-            io:println("No audience lists found.");
+        foreach mailchimp:SubscriberList3 list in listsResult.lists {
+            io:println("List ID: ", list["id"]);
+            io:println("Name: ", list["name"]);
+            mailchimp:Statistics? statsField = list.stats;
+            int memberCount = statsField?.memberCount ?: 0;
+            io:println("Members: ", memberCount);
+            io:println("Created: ", list["date_created"] ?: "N/A");
         }
     } else {
-        io:println("Error fetching audience lists: ", listsResult.message());
+        io:println("No audience lists found.");
     }
 }

@@ -37,17 +37,10 @@ public function main() returns error? {
         status: "subscribed"
     };
 
-    mailchimp:ListMembers2|error addMemberResult = 
-        mailchimpClient->/lists/[mailchimpListId]/members.post(newMemberPayload);
-
-    if addMemberResult is mailchimp:ListMembers2 {
-        io:println("Successfully added subscriber:");
-        io:println("Email: ", addMemberResult.emailAddress);
-        io:println("ID: ", addMemberResult.id);
-        io:println("Status: ", addMemberResult.status);
-    } else {
-        io:println("Error adding subscriber: ", addMemberResult.message());
-        return addMemberResult;
-    }
-    io:println("Short Mailchimp example finished.");
+    mailchimp:ListMembers2 addMemberResult =
+    mailchimpClient->/lists/[mailchimpListId]/members.post(newMemberPayload);
+    io:println("Successfully added subscriber:");
+    io:println("Email: ", addMemberResult.emailAddress);
+    io:println("ID: ", addMemberResult.id);
+    io:println("Status: ", addMemberResult.status);
 }
