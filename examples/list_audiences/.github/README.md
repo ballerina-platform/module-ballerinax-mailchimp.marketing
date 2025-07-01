@@ -1,1 +1,1 @@
-../ListAudiences.md
+../mailchimp-list-audiences.md
