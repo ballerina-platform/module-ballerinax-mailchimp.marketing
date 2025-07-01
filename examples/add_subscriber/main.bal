@@ -42,16 +42,14 @@ public function main() returns error? {
     }
     string memberId = <string>addMemberResult.id;
 
-    io:println("Added subscriber:");
-    io:println("Email: ", addMemberResult.emailAddress);
-    io:println("ID: ", memberId);
-    io:println("Status: ", addMemberResult.status);
+    io:println("Added subscriber - Email: ", addMemberResult.emailAddress, 
+               ", ID: ", memberId, 
+               ", Status: ", addMemberResult.status);
 
     mailchimp:ListMembers2 getMemberResult = check mailchimpClient->/lists/[mailchimpListId]/members/[memberId].get();
-    io:println("\nRetrieved member info:");
-    io:println("Email: ", getMemberResult.emailAddress);
-    io:println("Status: ", getMemberResult.status);
-    io:println("Merge Fields: ", getMemberResult.mergeFields.toJsonString());
+    io:println("\nRetrieved member info - Email: ", getMemberResult.emailAddress, 
+               ", Status: ", getMemberResult.status, 
+               ", Merge Fields: ", getMemberResult.mergeFields.toJsonString());
 
     mailchimp:MemberTags addTagPayload = {
         tags: [{ name: "BallerinaTestTag", status: "active" }]
