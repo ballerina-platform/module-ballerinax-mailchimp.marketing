@@ -25,7 +25,7 @@ Create a `Config.toml` file in the `examples/add_subscriber` directory:
 username = "<your-mailchimp-marketing-username>"
 mailchimpApiKey = "<your-mailchimp-marketing-access-token>"
 mailchimpListId = "<your-mailchimp-list-id>"
-````
+```
 
 ## How to Run
 
