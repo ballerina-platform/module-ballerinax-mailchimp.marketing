@@ -1,1 +1,1 @@
-../AddSubscriber.md
+../mailchimp-add-subscriber.md

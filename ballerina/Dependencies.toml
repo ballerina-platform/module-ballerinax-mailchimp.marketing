@@ -5,7 +5,7 @@
 
 [ballerina]
 dependencies-toml-version = "2"
-distribution-version = "2201.12.7"
+distribution-version = "2201.12.0"
 
 [[package]]
 org = "ballerina"
@@ -337,7 +337,7 @@ modules = [
 ]
 
 [[package]]
-org = "wso2"
+org = "ballerinax"
 name = "mailchimp.marketing"
 version = "1.0.0"
 dependencies = [
@@ -349,6 +349,6 @@ dependencies = [
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
-	{org = "wso2", packageName = "mailchimp.marketing", moduleName = "mailchimp.marketing"}
+	{org = "ballerinax", packageName = "mailchimp.marketing", moduleName = "mailchimp.marketing"}
 ]
 
