@@ -16,10 +16,10 @@
 
 import ballerina/test;
 
-configurable boolean isLiveServer = ?;
-configurable string username = ?;
-configurable string mailchimpApiKey = ?;
-configurable string baseUrl = ?;
+configurable boolean isLiveServer = false;
+configurable string username = "test-user";
+configurable string mailchimpApiKey = "test-key";
+configurable string baseUrl = "test-url";
 
 Client mailchimp = check new ({
     auth: {

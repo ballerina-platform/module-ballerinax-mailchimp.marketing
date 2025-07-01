@@ -18,9 +18,9 @@ import ballerina/io;
 import ballerina/uuid;
 import ballerinax/mailchimp.marketing as mailchimp;
 
-configurable string username = ?;
-configurable string mailchimpApiKey = ?;
-configurable string mailchimpListId = ?;
+configurable string username = "test-user";
+configurable string mailchimpApiKey = "test-key";
+configurable string mailchimpListId = "test-list-id";
 
 mailchimp:Client mailchimpClient = check new ({
     auth: {
