@@ -2,7 +2,7 @@
 
 [Mailchimp Marketing Email](https://mailchimp.com) is a powerful and user-friendly platform provided by Intuit Mailchimp, designed for creating, managing, and optimizing targeted email campaigns. It enables businesses to engage customers with personalized marketing emails, automated workflows, and insightful analytics to drive growth and build lasting relationships.
 
-The `ballerinax/mailchimp.marketing` package provides APIs to connect and interact with the [Mailchimp Marketing API](https://mailchimp.com/developer/marketing/api/), enabling seamless integration with applications to manage marketing email sending, templates, messages, and more.
+The `ballerinax/mailchimp.marketing` package provides APIs to connect and interact with the [Mailchimp Marketing API v3.0.85](https://mailchimp.com/developer/marketing/api/), enabling seamless integration with applications to manage marketing email sending, templates, messages, and more.
 
 ## Setup guide
 

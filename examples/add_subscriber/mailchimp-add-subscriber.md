@@ -59,15 +59,8 @@ In case of an error, it will print the error message.
 **Example output:**
 
 ```
-Added subscriber:
-Email: test.subscriber.abcd1234@example.com
-ID: 1234567890abcdef1234567890abcdef
-Status: subscribed
-
-Retrieved member info:
-Email: test.subscriber.abcd1234@example.com
-Status: subscribed
-Merge Fields: {}
+Added subscriber - Email: test.subscriber.abcd1234@example.com, ID: 1234567890abcdef1234567890abcdef, Status: subscribed
+Retrieved member info - Email: test.subscriber.abcd1234@example.com, Status: subscribed, Merge Fields: {}
 
 Tag 'BallerinaTestTag' added to member.
 
