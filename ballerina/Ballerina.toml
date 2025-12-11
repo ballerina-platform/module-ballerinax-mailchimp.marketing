@@ -2,10 +2,10 @@
 distribution = "2201.12.0"
 org = "ballerinax"
 name = "mailchimp.marketing"
-version = "1.0.0"
+version = "1.0.1"
 license = ["Apache-2.0"]
 authors = ["Ballerina"]
-keywords = ["mailchimp", "marketing", "email", "campaigns", "ballerina", "connector"]
+keywords = ["marketing", "email", "campaigns", "ballerina", "Vendor/Mailchimp", "Area/Social Media Marketing", "Type/Connector"]
 icon = "icon.png"
 repository = "https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing"
 
