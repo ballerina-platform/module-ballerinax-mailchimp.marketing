@@ -5,7 +5,7 @@ name = "mailchimp.marketing"
 version = "@toml.version@"
 license = ["Apache-2.0"]
 authors = ["Ballerina"]
-keywords = ["Marketing", "Email", "Campaigns", "Vendor/Mailchimp", "Area/Marketing", "Type/Connector"]
+keywords = ["Marketing", "Email", "Campaigns", "Vendor/Mailchimp", "Area/Marketing & Social Media", "Type/Connector"]
 icon = "icon.png"
 repository = "https://github.com/ballerina-platform/module-ballerinax-mailchimp.marketing"
 
