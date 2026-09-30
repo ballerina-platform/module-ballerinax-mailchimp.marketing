@@ -57,8 +57,14 @@ allprojects {
 
 def moduleVersion = project.version.replace("-SNAPSHOT", "")
 
-task build {
-    dependsOn(':mailchimp.marketing-ballerina:build')
+if (!tasks.names.contains('build')) {
+    tasks.register('build') {
+        dependsOn(':mailchimp.marketing-ballerina:build')
+    }
+} else {
+    tasks.named('build') {
+        dependsOn(':mailchimp.marketing-ballerina:build')
+    }
 }
 
 release {
